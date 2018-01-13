@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="sttgarut.ceritaanakislami">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".menu_main"></activity>
+            <activity
+                android:name=".MainActivity"
+                android:noHistory="true"
+                android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".menu_cerita">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".menu_main" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.DETAIL" />
+
+                <category android:name="android.intent.category.DETAIL" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".tentang">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".menu_main" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.DETAIL" />
+
+                <category android:name="android.intent.category.DETAIL" />
+            </intent-filter>
+    </activity>
+    <activity android:name=".nabi_daud" />
+    <activity android:name=".nabi_yusuf" />
+        <activity android:name=".nabi_musa_dan_nabi_harun" />
+        <activity android:name=".nabi_yaqub" />
+        <activity android:name=".nabi_ibrahim" />
+        <activity android:name=".nabi_yunus" />
+
+    </application>
+
+</manifest>
